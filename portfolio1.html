@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="QA Engineer Portfolio">
+    <title>Alex Morgan | QA Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            padding: 18px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 19px;
+            color: #dbeafe;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #0f172a;
+        }
+
+        /* About */
+
+        .about-text {
+            max-width: 800px;
+            font-size: 18px;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+
+        .contact-form {
+            max-width: 650px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            border: none;
+            cursor: pointer;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            QA Portfolio
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <div class="hero-container">
+
+        <h1>Alex Morgan</h1>
+
+        <h2>QA Engineer</h2>
+
+        <p>
+            Passionate QA Engineer focused on finding bugs,
+            improving software quality and creating great
+            user experiences.
+        </p>
+
+        <a href="#projects" class="btn">
+            View My Projects
+        </a>
+
+    </div>
+
+</header>
+
+<!-- About -->
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p class="about-text">
+        Hello! My name is Alex Morgan. I am a QA Engineer
+        interested in web application testing, API testing
+        and software quality assurance.
+
+        I enjoy finding defects, writing clear bug reports
+        and helping development teams deliver reliable products.
+    </p>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill-card">
+            <h3>Manual Testing</h3>
+            <p>
+                Test cases, checklists, exploratory testing
+                and regression testing.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Bug Reporting</h3>
+            <p>
+                Clear bug descriptions, severity,
+                priority and reproduction steps.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>API Testing</h3>
+            <p>
+                REST API testing using tools such as
+                Postman.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>SQL</h3>
+            <p>
+                Basic database queries and data validation.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>
+                Version control, repositories and
+                issue tracking.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Test Documentation</h3>
+            <p>
+                Test cases, test plans and defect reports.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <h3>Portfolio Website</h3>
+
+            <p>
+                Personal portfolio website created using
+                HTML and CSS. Tested for usability,
+                responsiveness and compatibility.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Web Application Testing</h3>
+
+            <p>
+                Practiced functional testing, regression
+                testing and defect reporting for a web
+                application.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>API Testing Project</h3>
+
+            <p>
+                Tested REST API endpoints and validated
+                response status codes and data.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Mobile Testing</h3>
+
+            <p>
+                Tested responsive layouts on different
+                screen sizes and mobile devices.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form class="contact-form">
+
+        <div class="form-group">
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                required
+            ></textarea>
+
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 Alex Morgan | QA Engineer Portfolio
+    </p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/" target="_blank">
+            My GitHub
+        </a>
+    </p>
+
+</footer>
+
+</body>
+</html>
